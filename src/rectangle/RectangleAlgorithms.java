@@ -155,7 +155,7 @@ public class RectangleAlgorithms {
 			 System.out.println("Neither of the rectangles are wholly contained with one another.");
 		 }
 		 System.out.println("The rectangles are "+checkAdjacency(a,b)+".");
-		 drawRectangles(a, b, "rect-drawing");
+		 drawRectangles(a, b, "./output-images/rect-drawing.png");
 	}
 	
 }

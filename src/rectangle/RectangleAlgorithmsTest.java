@@ -181,7 +181,7 @@ public class RectangleAlgorithmsTest {
 	public void ImageVerificationTest() throws IOException {
 		Rectangle a = new Rectangle(0.0, 0.0, 350, 200);
 		Rectangle b = new Rectangle(450, 0.0, 350, 200);
-		RectangleAlgorithms.drawRectangles(a, b, "rect-drawing");
+		RectangleAlgorithms.drawRectangles(a, b, "./output-images/rect-drawing.png");
 		BufferedImage actualImage = ImageIO.read(new File("./output-images/rect-drawing.png"));
 		BufferedImage expectedImage = ImageIO.read(new File("./expected-images/rect1.png"));
 		byte[] actualArray = ((DataBufferByte) actualImage.getData().getDataBuffer()).getData();
@@ -197,7 +197,7 @@ public class RectangleAlgorithmsTest {
 	public void BadImageVerificationTest() throws IOException {
 		Rectangle a = new Rectangle(0.0, 0.0, 400, 230);
 		Rectangle b = new Rectangle(450, 0.0, 550, 320);
-		RectangleAlgorithms.drawRectangles(a, b, "rect-drawing");
+		RectangleAlgorithms.drawRectangles(a, b, "./output-images/rect-drawing.png");
 		BufferedImage actualImage = ImageIO.read(new File("./output-images/rect-drawing.png"));
 		BufferedImage expectedImage = ImageIO.read(new File("./expected-images/bladee.jpg"));
 		byte[] actualArray = ((DataBufferByte) actualImage.getData().getDataBuffer()).getData();

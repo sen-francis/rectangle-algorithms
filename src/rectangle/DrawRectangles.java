@@ -52,10 +52,9 @@ public class DrawRectangles extends JPanel {
 
 	/**
 	* This method saves the drawing as a PNG based on the given filename
-	* @param  fname  the desired filename
+	* @param  filename  the desired filename
 	*/
-    public void save(String fname) throws IOException{
-    	String filename = "./output-images/"+fname+".png";
+    public void save(String filename) throws IOException{;
         ImageIO.write(paintImage, "PNG", new File(filename));
     }
 }
